@@ -46,9 +46,11 @@ public int factorial(int value)
        * 
        * By doing this, we break up the equation n! into n! = n * (n-1)!.
        */
-
-       answer = factorial(value - 1) * value;
-       return answer;
+       else
+       {
+       	answer = factorial(value - 1) * value;
+       	return answer;
+       }
 
 
 }
@@ -71,9 +73,18 @@ public int factorial(int value)
      */
 public int fibonacci(int n)
 {
-
-
-	//TODO
+         if(n == 0)
+         {
+             return 0;
+         }
+         else if(n == 1)
+         {
+             return 1;
+         }
+         else
+         {
+         	return fibonacci(n - 1) + fibonacci(n - 2);
+         }
 
 
     
