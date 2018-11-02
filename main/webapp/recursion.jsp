@@ -179,8 +179,21 @@ public int nnaryTreeSize(int branchingFactor, int height)
      */
 public int treeSum(Tree tree)
 {
-	//TODO
+        if (tree == null)
+        {
+            return 0;
+        }
+        else
+        {
+        	int sum = tree.getValue();
+        	for(Tree a : tree.getChildren())
+        	{
+            	sum += a.getValue();
+        	}
+        	return sum;
+        }
 }
+	
     
     /**
      * This function computes the area of a series of squares and circles. Specifically, we consider a series
